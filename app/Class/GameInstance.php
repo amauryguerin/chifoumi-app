@@ -32,11 +32,6 @@ class GameInstance
     {
         // randomisation du choix de l'ordinateur
         $this->computerChoice = $this->gameChoices[array_rand($this->gameChoices, 1)];
-
-        if (isset($this->userName) !== $userName) {
-            // Réinitialise la winstreak lorsque l'utilisateur change
-            $this->userWinStreak = 0;
-        }
         
         // assignation des choix utilisateur dans les propriétés associées
         $this->userChoice = $userChoice;
@@ -48,8 +43,8 @@ class GameInstance
         // vérification ! de si l'utilisateur existe dans usersData via son nom userName
         if (!isset($this->usersData[$this->userName])) {
             $this->usersData[$this->userName] = 0;
-            $this->userWinStreak = 0;
             $this->computerScore = 0;
+            $this->userWinStreak = 0;
 
             $params = [':userName' => $this->userName, ':userScore' => $this->usersData[$this->userName]];
             \App\App::getDB()->create($params);
