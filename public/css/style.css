@@ -1,0 +1,219 @@
+:root {
+  --bg--color: #f9eddd;
+  --main--color: #6d1276;
+  --secondary--color: #a2074d;
+  --alt--color: #6c9eae;
+  --white--color: #fff;
+  --black--color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg--color);
+  color: var(--black--color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  color: var(--secondary--color);
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  color: var(--secondary--color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  color: var(--bg--color);
+}
+
+p,
+li {
+  margin: 0;
+  line-height: 2;
+}
+
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+/* HEADER */
+.site--header {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.site--header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site--header nav .site--logo {
+  font-size: 4rem;
+}
+
+/* FOOTER */
+.site--footer {
+  margin-top: 10rem;
+  width: 100%;
+  color: var(--bg--color);
+  background-color: var(--secondary--color);
+  padding: 4rem 0;
+}
+.site--footer div {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.site--footer h2 {
+  color: var(--bg--color);
+}
+
+/* HOME */
+.home form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.home form input[name="userName"] {
+  max-width: 40rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+.home form div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.home .scoreboard {
+  margin-top: 6rem;
+  background: color-mix(in srgb, var(--secondary--color) 50%, transparent);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.home .scoreboard h3 {
+  background-color: var(--secondary--color);
+  margin: 0;
+  padding: 1.5rem 6rem;
+  text-align: center;
+}
+.home .scoreboard ol {
+  list-style-position: inside;
+}
+.home .scoreboard ol li {
+  padding: 1rem 6rem;
+  color: var(--bg--color);
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+.home .scoreboard ol li:nth-child(2n + 2) {
+  background: color-mix(in srgb, var(--secondary--color) 40%, transparent);
+}
+.home .scoreboard ol li span {
+  margin-left: auto;
+}
+
+/* RESULT */
+.result h2 {
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  background: color-mix(in srgb, var(--secondary--color) 50%, transparent);
+  color: var(--bg--color);
+}
+
+.result h2 span {
+  display: block;
+  font-size: 1rem;
+}
+
+/* BTN */
+button,
+.btn {
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem var(--secondary--color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--secondary--color) 50%, transparent);
+  color: var(--bg--color);
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  transition: all 0.2s ease;
+}
+button:hover,
+.btn:hover {
+  box-shadow: 1rem 1rem var(--secondary--color);
+}
+
+/* CONTACT BTN */
+.contact--btn {
+  position: relative;
+  transition: all 0.2s ease;
+  color: var(--secondary--color);
+}
+.contact--btn:hover {
+  color: var(--bg--color);
+}
+.contact--btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  background: var(--secondary--color);
+  opacity: 0.5;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+.contact--btn:hover:before {
+  width: 100%;
+  background: var(--secondary--color);
+}
+.contact--btn span {
+  position: relative;
+  font-size: 2rem;
+  padding: 0 1rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
